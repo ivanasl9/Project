@@ -21,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-        HomeFragment homeFragment = new HomeFragment();
+        HomeFragment homeFragment = HomeFragment.newInstance();
+
         LearnMoreFragment learnMoreFragment = new LearnMoreFragment();
         InfoFragment infoFragment = new InfoFragment();
 
