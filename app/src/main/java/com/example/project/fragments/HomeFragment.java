@@ -1,8 +1,10 @@
-package com.example.project;
+package com.example.project.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -10,11 +12,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.project.Data;
+import com.example.project.ListAdapter;
+import com.example.project.MainActivity;
+import com.example.project.R;
+
 import java.util.ArrayList;
+import java.util.Objects;
 
 
 public class HomeFragment extends Fragment implements ListAdapter.ItemClickListener {
     private final ArrayList<Data> arrayList = new ArrayList<>();
+
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -76,6 +85,9 @@ public class HomeFragment extends Fragment implements ListAdapter.ItemClickListe
 
     @Override
     public void onItemClick(Data data) {
+
+
+
 
     }
 }

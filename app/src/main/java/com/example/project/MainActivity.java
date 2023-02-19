@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.project.databinding.ActivityMainBinding;
+import com.example.project.fragments.HomeFragment;
+import com.example.project.fragments.InfoFragment;
+import com.example.project.fragments.LearnMoreFragment;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         InfoFragment infoFragment = new InfoFragment();
 
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame, homeFragment).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame, homeFragment, "home_fragment").commit();
 
         binding.bottomNavigation.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override

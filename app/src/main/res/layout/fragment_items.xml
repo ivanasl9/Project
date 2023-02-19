@@ -3,14 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.HomeFragment">
+    tools:context=".fragments.ItemsFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recView"
+    <TextView
+        android:id="@+id/textV"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/home_items">
-    </androidx.recyclerview.widget.RecyclerView>
+        android:text="@string/hello_blank_fragment" />
 
-    
 </FrameLayout>
