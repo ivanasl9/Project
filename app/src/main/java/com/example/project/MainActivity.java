@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
         HomeFragment homeFragment = new HomeFragment();
         LearnMoreFragment learnMoreFragment = new LearnMoreFragment();
         InfoFragment infoFragment = new InfoFragment();
@@ -43,11 +45,8 @@ public class MainActivity extends AppCompatActivity {
                         return true;
 
                 }
-
                 return false;
             }
         });
-
-
     }
 }
