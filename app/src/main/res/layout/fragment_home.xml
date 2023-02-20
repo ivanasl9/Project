@@ -64,7 +64,8 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_gravity="center_horizontal"
-                        android:contentDescription="@string/icon2">
+                        android:contentDescription="@string/icon2"
+                        android:src="@drawable/ic_work">
 
                     </ImageView>
 
@@ -107,7 +108,10 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_gravity="center_horizontal"
-                        android:contentDescription="@string/icon2"></ImageView>
+                        android:contentDescription="@string/icon2"
+                        android:src="@drawable/ic_work">
+
+                    </ImageView>
 
                     <TextView
 
@@ -150,7 +154,8 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_gravity="center_horizontal"
-                        android:contentDescription="@string/icon2">
+                        android:contentDescription="@string/icon2"
+                        android:src="@drawable/ic_school">
 
                     </ImageView>
 
