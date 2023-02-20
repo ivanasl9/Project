@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Notes"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".Notes">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -16,32 +15,30 @@
             android:id="@+id/arrowBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_arrow_back"
+            android:layout_centerVertical="true"
             android:onClick="arrowBackOption"
             android:padding="15dp"
-            android:layout_centerVertical="true">
-        </ImageView>
+            app:srcCompat="@drawable/ic_arrow_back" />
+
 
         <ImageView
             android:id="@+id/deleteNotes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/voice_mess"
             android:onClick="deleteN"
-            app:srcCompat="@drawable/ic_delete"
             android:padding="15dp"
-            android:layout_toRightOf="@id/voice_mess"
-            android:layout_centerVertical="true">
-        </ImageView>
+            app:srcCompat="@drawable/ic_delete" />
+
 
         <ImageView
             android:id="@+id/save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/add"
             android:padding="15dp"
-            android:src="@drawable/ic_save"
-            android:layout_toLeftOf="@id/add">
-
-        </ImageView>
+            android:src="@drawable/ic_save" />
 
 
         <ImageView
@@ -50,43 +47,40 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:padding="15dp"
-            app:srcCompat="@drawable/ic_add">
+            app:srcCompat="@drawable/ic_add" />
 
-        </ImageView>
 
         <ImageView
             android:id="@+id/voice_mess"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_toRightOf="@id/add"
+            android:layout_toEndOf="@id/add"
             android:padding="15dp"
-            app:srcCompat="@drawable/ic_voice_message">
+            app:srcCompat="@drawable/ic_voice_message" />
 
-        </ImageView>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_close"
+            android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:onClick="dismiss"
             android:padding="15dp"
-            android:layout_alignParentRight="true">
+            app:srcCompat="@drawable/ic_close" />
 
-        </ImageView>
 
     </RelativeLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/your_notes"
-        android:textSize="20sp"
-        android:layout_marginTop="30dp"
         android:layout_gravity="center_vertical"
+        android:layout_marginTop="30dp"
         android:gravity="center"
-        android:textColor="@color/black">
+        android:text="@string/your_notes"
+        android:textColor="@color/black"
+        android:textSize="20sp">
 
     </TextView>
 
@@ -101,6 +95,8 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/purple_200"
             android:clickable="true"
+            android:focusable="true"
+            android:inputType="text"
             android:hint="@string/title"
             android:text="" />
 
@@ -112,8 +108,6 @@
         android:layout_height="wrap_content"
         android:hint="@string/your_text"
         android:inputType="date" />
-
-
 
 
 </LinearLayout>
