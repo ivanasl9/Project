@@ -19,7 +19,7 @@ import java.util.Calendar;
 public class Notes extends AppCompatActivity {
 
     private final String PREFE_KEY = "myprefe";
-    EditText ed1, dateEd;
+    EditText ed1, textEd;
     String input = "";
     ImageView delete;
 
@@ -32,10 +32,10 @@ public class Notes extends AppCompatActivity {
         System.out.println(calendar.get(Calendar.MONTH));
 
         delete = findViewById(R.id.deleteNotes);
-        dateEd = findViewById(R.id.text);
+        textEd = findViewById(R.id.text);
         ed1 = findViewById(R.id.Title);
         ed1.setText(getValueNoteActivity1(getApplicationContext()));
-
+        textEd.setText(getValueNoteActivity2(getApplicationContext()));
         ed1.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -51,6 +51,39 @@ public class Notes extends AppCompatActivity {
             public void afterTextChanged(Editable editable) {
             }
         });
+
+        textEd.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
+                saveValue2(getApplicationContext(), charSequence.toString());
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+    }
+
+    private String getValueNoteActivity2(Context context2) {
+        SharedPreferences preferences = context2.getSharedPreferences(PREFE_KEY, MODE_PRIVATE);
+
+        return preferences.getString("EditText2", "");
+    }
+
+    private void saveValue2(Context context2, String text2) {
+        SharedPreferences settings = context2.getSharedPreferences(PREFE_KEY, MODE_PRIVATE);
+        SharedPreferences.Editor editor;
+        editor = settings.edit();
+
+        editor.putString("EditText2", text2);
+        editor.apply();
     }
 
     private void saveValue1(Context context1, String text1) {
@@ -58,6 +91,7 @@ public class Notes extends AppCompatActivity {
         SharedPreferences.Editor editor;
         editor = settings.edit();
         editor.putString("EditText", text1);
+
         editor.apply();
     }
 
