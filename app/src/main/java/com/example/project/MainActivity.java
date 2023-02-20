@@ -10,6 +10,7 @@ import com.example.project.databinding.ActivityMainBinding;
 import com.example.project.fragments.HomeFragment;
 import com.example.project.fragments.InfoFragment;
 import com.example.project.fragments.LearnMoreFragment;
+import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,8 +27,12 @@ public class MainActivity extends AppCompatActivity {
 
         HomeFragment homeFragment = HomeFragment.newInstance();
 
-        LearnMoreFragment learnMoreFragment = new LearnMoreFragment();
+        LearnMoreFragment learnMoreFragment = LearnMoreFragment.newInstance();
         InfoFragment infoFragment = new InfoFragment();
+
+        BadgeDrawable badgeDrawable = binding.bottomNavigation.getOrCreateBadge(R.id.learnMore_icon);
+        badgeDrawable.setNumber(8);
+        badgeDrawable.setVisible(true);
 
 
         getSupportFragmentManager().beginTransaction().replace(R.id.frame, homeFragment, "home_fragment").commit();

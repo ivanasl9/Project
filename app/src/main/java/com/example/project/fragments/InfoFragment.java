@@ -10,15 +10,9 @@ import android.view.ViewGroup;
 
 import com.example.project.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link InfoFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class InfoFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+public class InfoFragment extends Fragment {
+    
     private static final String ARG_PARAM1 = "param1";
 
     // TODO: Rename and change types of parameters
@@ -29,14 +23,7 @@ public class InfoFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @return A new instance of fragment InfoFragment.
-     */
-    // TODO: Rename and change types and number of parameters
+
     public static InfoFragment newInstance(String param1) {
         InfoFragment fragment = new InfoFragment();
         Bundle args = new Bundle();
