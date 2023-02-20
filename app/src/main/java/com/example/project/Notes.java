@@ -18,8 +18,7 @@ import java.util.Calendar;
 
 public class Notes extends AppCompatActivity {
 
-    private static final String TAG = "date";
-    private String PREFE_KEY = "myprefe";
+    private final String PREFE_KEY = "myprefe";
     EditText ed1, dateEd;
     String input = "";
     ImageView delete;
@@ -32,9 +31,9 @@ public class Notes extends AppCompatActivity {
         Calendar calendar = Calendar.getInstance();
         System.out.println(calendar.get(Calendar.MONTH));
 
-        delete = (ImageView) findViewById(R.id.deleteNotes);
-        dateEd = (EditText) findViewById(R.id.text);
-        ed1 = (EditText) findViewById(R.id.Title);
+        delete = findViewById(R.id.deleteNotes);
+        dateEd = findViewById(R.id.text);
+        ed1 = findViewById(R.id.Title);
         ed1.setText(getValueNoteActivity1(getApplicationContext()));
 
         ed1.addTextChangedListener(new TextWatcher() {
@@ -59,7 +58,7 @@ public class Notes extends AppCompatActivity {
         SharedPreferences.Editor editor;
         editor = settings.edit();
         editor.putString("EditText", text1);
-        editor.commit();
+        editor.apply();
     }
 
     public String getValueNoteActivity1(Context context1) {
