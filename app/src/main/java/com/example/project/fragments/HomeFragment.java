@@ -67,19 +67,22 @@ public class HomeFragment extends Fragment implements ListAdapter.ItemClickListe
 
     private void initRecyclerView(View view) {
 
-        RecyclerView recyclerView = view.findViewById(R.id.recView);
+       // RecyclerView recyclerView = view.findViewById(R.id.recView);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(layoutManager);
+      //  recyclerView.setLayoutManager(layoutManager);
         ListAdapter listAdapter = new ListAdapter(arrayList, this);
-        recyclerView.setAdapter(listAdapter);
+       // recyclerView.setAdapter(listAdapter);
 
-
+/*
         recyclerView.postDelayed(new Runnable() {
             public void run() {
                 recyclerView.smoothScrollToPosition(0);
             }
         }, 500);
+
+        */
+
     }
 
 

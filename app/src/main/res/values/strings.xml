@@ -3,6 +3,11 @@
     <string name="info">info</string>
     <string name="learnmore">learn more</string>
     <string name="new_text">new text</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">hello</string>
+    <string name="title_category">Title</string>
+    <string name="shopping_list">Shopping list</string>
+    <string name="other_obligations">Other \n obligations</string>
+    <string name="faculty_obligations">Faculty \n obligations</string>
+    <string name="icon2">icon2</string>
+    <string name="profile_icon">profile</string>
 </resources>
